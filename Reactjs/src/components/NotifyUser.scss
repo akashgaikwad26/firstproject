@@ -1,0 +1,20 @@
+.select-file{
+    display: flex;
+    gap: 5rem;
+    color: #1c84c3;
+
+}
+.select-text{
+position: relative;
+bottom: .5rem;
+margin-right: .5rem;
+    // content: "Select users from file";
+}
+// label[for='file']{
+//     display: inline-block;
+//     width: 2rem;
+//     height: 2rem;
+// }
+// .select-file  input[type='file']{
+
+// }

@@ -1,0 +1,20 @@
+.wrapper {
+    text-align: center; /* Optional: To center the content horizontally */
+  }
+  
+  .left-div, .right-div {
+    display: inline-block;
+    vertical-align: top; 
+    /* margin-right: 8px;  */
+    /* Optional: To align the content at the top of the divs */
+  }
+
+  
+    .my-textarea {
+        min-height: 300px;
+        min-width: 450px;
+        font-size: 15px;
+        font-weight: bold; /* Set a minimum height of 100 pixels */
+        padding: 10px;
+      }
+      

@@ -1,0 +1,27 @@
+.textareas{
+  
+        text-align: center;
+        margin-top: 8rem; /* Optional: To center the content horizontally */
+        margin-right: 32.5rem; /*43rem;*/
+}
+
+  table{
+    margin-top: 1rem !important;
+  }
+
+  .headers{
+    height: 300px; /* set the height of the scrollable area */
+    width: 70%;
+    margin-left: 10rem;
+    overflow: auto;
+    
+  }
+
+  .placeholder-large::placeholder {
+    font-size: 23px;
+  }
+
+
+  .buttons{
+    margin-left: 10rem;
+  }

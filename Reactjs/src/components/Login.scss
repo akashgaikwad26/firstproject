@@ -1,0 +1,221 @@
+.pyui_login {
+    height: 100%;
+    width: 100%;
+    // background: url("../../assets/login-bg.png");
+    // background-size: 40rem auto;
+    // background-repeat: no-repeat;
+    // background-position: top center;
+    background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pyui_container {
+    background: rgb(255 255 255 / 88%);
+    height: min(390px, 90%);
+    //height: min(600px, 90%);
+    width: min(900px, 90%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "logo login"
+      "powerby login";
+  }
+  
+  .pyui_login-panel_logo {
+    grid-area: logo;
+    max-width: 80%;
+    padding: 2rem 0;
+    justify-self: center;
+    align-self: center; // remove for height 600 at line 15
+  }
+  
+  .tag-line {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .pyui_wrapper {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .pyui_login-logo {
+    height: auto;
+    width: 100%;
+  }
+  
+  .dsl-logo {
+    height: auto;
+    width: auto;
+    max-width: 8rem;
+  }
+  
+  .text {
+    text-align: center;
+    margin-block: 1rem;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #888;
+  }
+  
+  .pyui_powered-by {
+    border-top: 1px solid #eee;
+    padding-block-end: 1rem;
+    text-align: center;
+    grid-area: powerby;
+  }
+  
+  .pyui_loginform {
+    background: hsl(0deg 0% 93% / 37%);
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    grid-area: login;
+  }
+  
+  .pyui_loginform-title {
+    font-size: 1.5rem;
+    margin-block-end: 1rem;
+  
+    >span {
+      font-weight: 600;
+    }
+  }
+  
+  .form-group-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 4rem 3rem;
+    width: 100%;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+  
+  .login_input {
+    border: 1px solid rgba(145, 142, 142, 0.37);
+    padding: 0.75rem 0.5rem;
+  
+    border-radius: 3px;
+    font-size: 0.875rem;
+    color: var(--color-text-default);
+    background: #fff;
+    transition: all 0.1s ease-in;
+  }
+  
+  .login_input:focus {
+    outline: 1px solid #8ed6fc;
+    border-color: #8ed6fc;
+  }
+  
+  .error-msg {
+    background-color: rgb(248 215 218 / 67%);
+    color: rgb(220 53 69 / 72%);
+    text-align: center;
+  
+    .message {
+      padding: 0.25rem;
+      display: block;
+    }
+  
+    .message:empty {
+      display: none;
+    }
+  }
+  
+  .pyui-msg {
+    padding: 0.75rem 1rem;
+    font-size: 0.876rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    margin-block-end: 0.5rem;
+  
+    &.success {
+      background-color: hsl(154deg 70% 88%);
+      color: hsl(155deg 100% 25%);
+      border-color: hsl(154deg 71% 83%);
+    }
+  
+    &.error {
+      background-color: hsl(350deg 78% 91%);
+      color: hsl(349deg 61% 45%);
+      border-color: hsl(349deg 79% 87%);
+    }
+  
+    &.information {
+      background-color: hsl(198deg 100% 92%);
+      color: hsl(198deg 73% 46%);
+      border-color: hsl(198deg 97% 87%);
+    }
+  }
+  
+  // .passresetmessage {
+  //   margin-top: 2rem;
+  // }
+  
+  .reset-msg {
+    // background-color: rgb(248 215 218 / 67%);
+    color: rgb(220 53 69 / 72%);
+    text-align: center;
+  
+    .resetmessage {
+      padding: 0.25rem;
+      display: block;
+      font-size: 1.5rem;
+    }
+  
+    .message:empty {
+      display: none;
+    }
+  }
+  
+  .submit-button {
+    border: none;
+    padding: 0.75rem 0.5rem;
+    border-radius: 3px;
+    background-color: var(--color-secondary);
+    color: white;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+  
+    &:hover {
+      background-color: rgb(62 64 149 / 78%);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .pyui_container {
+      grid-template-areas:
+        "logo "
+        "login"
+        "powerby";
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto;
+      height: auto;
+      max-width: 90%;
+    }
+  
+    .pyui_login-panel_logo {
+      padding: 1rem 1rem;
+    }
+  }

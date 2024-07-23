@@ -1,0 +1,741 @@
+/* .grid-container{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 350px 350px 350px;
+} */
+
+
+/* .circlechart{
+    height: 350px;
+    /* width: 350px; */
+    /* margin: 20px 30px;
+    position: relative;
+    left: 75px; */
+    /* box-shadow: 20px; */
+    /* box-shadow: 8px 8px 10px rgba(220, 220, 220, 0.8),
+    -2px -2px 10px rgba(220, 220, 220, 0.8);
+    display: inline-block;
+    border-radius: 10px;
+} */
+
+/*/
+/* 
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+} */
+/* .alert-box{
+ 
+        width: 80%;
+        justify-items: center;
+        position: 'relative';
+        left: 150px;
+    
+     
+} */
+.pyui_main-content-section {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pyui_module-container {
+  padding-block-start: 1rem;
+}
+
+.pyui_module-page-header {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(15rem, 25rem));
+  grid-template-columns: auto minmax(15rem, 1fr);
+  gap: 2rem;
+  padding: 1rem 0 3rem 0;
+}
+
+// welcome banner
+.pyui_banner {
+  &-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  &-user {
+    color: var(--color-primary);
+  }
+  &-description {
+    color: #888;
+  }
+}
+
+// select a track
+.pyui_module-select-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    background: lightgrey;
+    width: 1px;
+    left: -1rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &-label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  & .redirect-button {
+    font-size: 15px;
+    font-weight: 400;
+    background-color: white;
+    color: #1c84c3;
+    cursor: not-allowed;
+    border: 2px solid #1c84c3;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+  }
+}
+
+// Module
+.pyui_module-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+
+  &-item {
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 7px 14px 0 rgba(65, 69, 88, 0.1),
+      0 3px 6px 0 rgba(0, 0, 0, 0.07); // 0 1px 3px rgb(3 0 71 / 9%);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 16px 16px -1px rgba(10, 22, 70, 0.1),
+        0 0 1px 0 rgba(10, 22, 70, 0.06) !important;
+      translate: 0 -10px;
+    }
+
+    &.inactive {
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
+      user-select: none;
+
+      &:hover {
+        translate: none;
+      }
+    }
+
+    &-clickable {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      height: 100%;
+      padding-block-end: 1.5rem;
+      color: var(--color-text-default);
+    }
+
+    &-disabled {
+      opacity: 0.7;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &-header {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 2rem 1rem 1.5rem 1rem;
+      background: var(--color-accent);
+
+      &-1000 {
+        background-image: linear-gradient(238deg, #0fd850 0%, #f9f047 100%);
+      }
+      &-1005 {
+        background-image: linear-gradient(238deg, #495aff 0%, #0acffe 100%);
+      }
+      &-1010 {
+        background-image: linear-gradient(238deg, #6713d2 0%, #cc208e 100%);
+      }
+    }
+
+    &-icon {
+      color: #fff;
+      background: rgb(255 255 255 / 19%);
+      font-size: 2rem;
+      width: 4rem;
+      height: 4rem;
+      padding: 0.5rem;
+      text-align: center;
+      border-radius: 100%;
+    }
+
+    &-title {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: normal;
+      text-shadow: 1px 2px #777;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0 1rem;
+
+      &-level {
+        font-size: 0.75rem;
+        display: flex;
+        gap: 0.25rem;
+        color: #817c7c;
+      }
+
+      &-description {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+th{
+  scroll-behavior:unset;
+  // position: fixed;
+}
+tr{
+  width: 8rem;
+  
+}
+table{
+  width: 100%;
+  position: relative;
+}
+table,th,td{
+    
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    min-height: 100px;
+}
+.tr-tofix{
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top:0rem
+  
+}
+span{
+  display: inline-block;
+}
+.pyui_main-tabs2 {
+  width: 13rem;
+  height:2rem;
+ 
+  text-align: center;
+
+  // border: 3px solid black;
+  // border: 0px 2px 0px 0px solid black;
+  // border-bottom: 2px solid #9c27b0;
+  cursor: pointer;
+
+  // border-bottom: 2px solid rgba(20, 1, 1, 0.973);
+}
+.pyui_main-tabs2:hover{
+  width: 13rem;
+  height:2rem;
+  text-align: center;
+  border-bottom:2px solid #1c84c3 ;
+}
+
+table thead th {
+  border: 1px solid #c7c1c1 !important;
+    background: #efefef !important;
+    color: #137cbc !important;
+    // padding: 1rem !important;
+}
+
+.tab-selected{
+  width: 13rem;
+  height:2rem;
+  text-align: center;
+  border-bottom:2px solid #1c84c3 ;
+
+}
+
+.primary-button {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  background-color: var(--color-secondary);
+  color: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  margin-left: 1.5rem;
+  //margin-right: 0.6rem;
+}
+
+.primary-button:disabled {
+  background-color: #ccc;
+  pointer-events: none;
+}
+
+.primary-button:disabled:hover {
+  background-color: #ccc;
+}
+
+.primary-button:hover {
+  background-color: rgb(62 64 149 / 78%);
+  transition: all 0.2s ease-in-out;
+}
+.table-exe{
+  // display: ;
+  // width:100%;
+  min-height: 50px;
+  max-height: 300px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  // margin-bottom: 100px;
+}
+.tr-table{
+  // height: ;
+  overflow-y: scroll;
+
+}
+.session-tabs{
+  gap:2rem;
+  display: flex;
+  align-items:center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+.pyui_main-content-section {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pyui_module-container {
+  padding-block-start: 1rem;
+}
+
+.pyui_module-page-header {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(15rem, 25rem));
+  grid-template-columns: auto minmax(15rem, 1fr);
+  gap: 2rem;
+  padding: 1rem 0 3rem 0;
+}
+
+// welcome banner
+.pyui_banner {
+  &-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &-user {
+    color: var(--color-primary);
+  }
+
+  &-description {
+    color: #888;
+  }
+}
+
+// select a track
+.pyui_module-select-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    background: lightgrey;
+    width: 1px;
+    left: -1rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &-label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  & .redirect-button {
+    font-size: 15px;
+    font-weight: 400;
+    background-color: white;
+    color: #1c84c3;
+    cursor: not-allowed;
+    border: 2px solid #1c84c3;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+  }
+}
+
+// Module
+.pyui_module-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+
+  &-item {
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 7px 14px 0 rgba(65, 69, 88, 0.1),
+      0 3px 6px 0 rgba(0, 0, 0, 0.07); // 0 1px 3px rgb(3 0 71 / 9%);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 16px 16px -1px rgba(10, 22, 70, 0.1),
+        0 0 1px 0 rgba(10, 22, 70, 0.06) !important;
+      translate: 0 -10px;
+    }
+
+    &.inactive {
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
+      user-select: none;
+
+      &:hover {
+        translate: none;
+      }
+    }
+
+    &-clickable {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      height: 100%;
+      padding-block-end: 1.5rem;
+      color: var(--color-text-default);
+    }
+
+    &-disabled {
+      opacity: 0.7;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &-header {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 2rem 1rem 1.5rem 1rem;
+      background: var(--color-accent);
+
+      &-1000 {
+        background-image: linear-gradient(238deg, #0fd850 0%, #f9f047 100%);
+      }
+
+      &-1005 {
+        background-image: linear-gradient(238deg, #495aff 0%, #0acffe 100%);
+      }
+
+      &-1010 {
+        background-image: linear-gradient(238deg, #6713d2 0%, #cc208e 100%);
+      }
+    }
+
+    &-icon {
+      color: #fff;
+      background: rgb(255 255 255 / 19%);
+      font-size: 2rem;
+      width: 4rem;
+      height: 4rem;
+      padding: 0.5rem;
+      text-align: center;
+      border-radius: 100%;
+    }
+
+    &-title {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: normal;
+      text-shadow: 1px 2px #777;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0 1rem;
+
+      &-level {
+        font-size: 0.75rem;
+        display: flex;
+        gap: 0.25rem;
+        color: #817c7c;
+      }
+
+      &-description {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+tr {
+  width: 8rem;
+}
+
+table,
+th,
+td {
+
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+span {
+  display: inline-block;
+}
+
+.pyui_main-tabs2 {
+  width: 13rem;
+  height: 2rem;
+
+  text-align: center;
+
+  // border: 3px solid black;
+  // border: 0px 2px 0px 0px solid black;
+  // border-bottom: 2px solid #9c27b0;
+  cursor: pointer;
+
+  // border-bottom: 2px solid rgba(20, 1, 1, 0.973);
+}
+
+.pyui-download-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pyui_main-tabs2:hover {
+  width: 13rem;
+  height: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #1c84c3;
+}
+
+.tab-selected {
+  width: 13rem;
+  height: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #1c84c3;
+
+}
+
+.select-interval {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .interval-title {
+    margin-right: 1.5rem;
+    margin-left: 30px;
+    
+  }
+}
+
+.session-tabs {
+  display: flex;
+  align-items: center;
+  // background-color: #f3f3f3;
+  // width: fit-content;
+
+  // margin-top: 2rem;
+}
+
+.pyui_session {
+  width: 15rem;
+  min-width: 10rem;
+  max-width: 100%;
+  position: relative;
+  user-select: none;
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 0.875rem;
+    background-color: white;
+    padding: 0.9rem 1rem; //0.5rem 1rem
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 0px 20px;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 0.5rem;
+      height: 0.5rem;
+      border-right: 2px solid var(--color-text-default);
+      border-bottom: 2px solid var(--color-text-default);
+      transform: rotate(45deg);
+      position: absolute;
+      right: 15px;
+      top: 20px;
+      transition: all 0.3s;
+    }
+
+    &.expanded::after {
+      top: 20px;
+      transform: rotate(-135deg);
+      transition: transform 0.3s ease-in;
+    }
+  }
+
+  &-list {
+    position: absolute;
+    top: 105%;
+    width: 15rem;
+    background-color: white;
+    transition: all 0.3s ease-in;
+    z-index: 3;
+
+    &-item {
+      font-size: 0.875rem;
+      cursor: pointer;
+      color: var(--color-text-default);
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid #eee;
+      transition: all 0.1s ease-in;
+
+      &-date {
+        font-size: 0.875rem;
+        cursor: pointer;
+        color: var(--color-text-default);
+        padding: 0.5rem 1rem;
+
+        // margin-top: 0.525rem;
+        // border-bottom: 1px solid #eee;
+        // transition: all 0.1s ease-in;
+        // & .date-picker-title {
+        //   margin-bottom: 0.525rem;
+        // }
+
+        &::after {
+          display: block;
+          content: "";
+          width: 0.5rem;
+          height: 0.5rem;
+          border-right: 2px solid var(--color-text-default);
+          border-bottom: 2px solid var(--color-text-default);
+          transform: rotate(45deg);
+          position: absolute;
+          right: 15px;
+          top: 12.5rem;
+          transition: all 0.3s;
+        }
+
+        &.expand::after {
+          top: 12.85rem;
+          transform: rotate(-135deg);
+          transition: transform 0.3s ease-in;
+        }
+      }
+    }
+
+    &-item:not(.disabled):hover {
+      background-color: rgba(156, 39, 176, 0.2);
+    }
+
+
+  }
+
+  & .disabled {
+    cursor: default;
+    opacity: 0.7;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+
+.custom-date {
+  display: flex;
+  flex-direction: column;
+  // width: 30rem;
+  padding: 0rem 0.5rem 0.5rem;
+
+  .date-input-field {
+    padding: 0.25rem 0.25rem;
+  }
+}
+.admin-btn{
+  position: relative;
+
+            padding:0.5rem;
+            border-radius:1rem;
+            left: 50em;
+            bottom: 1rem;
+            box-shadow: 8;
+            margin-top: 15px;
+            background-color: #1c84c3;
+            color: white;
+           
+}
+.admin-btn:hover{
+  
+    background-color: #fff;
+    color: #1c84c3;
+     font-weight: 600; 
+     border: 2px solid #1c84c3;
+}

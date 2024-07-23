@@ -1,0 +1,65 @@
+/* Styling for the modal overlay */
+.ReactModal__Overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pyui_payment-section{
+margin-top:7rem ;
+}
+
+/* Styling for the modal content */
+.ReactModal__Content {
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Styling for the dialog data */
+.ReactModal-Content {
+  // display: block;
+  // margin-bottom: 5px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  &-details {
+    margin-block-end: 1rem;
+
+    >label {
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+
+      >span {
+        color: #333;
+        margin-inline-start: 1rem;
+        width: 8rem;
+        text-align: start;
+        word-wrap: break-word; /* Word wrap property */
+      }
+
+      &.md {
+        color: #db1010;
+      }
+
+      &.small {
+        font-size: 0.75rem;
+        color: #625f5f;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      margin-top: 20px;
+      // gap: 0.5rem;
+      background: hsl(0deg 0% 93.33% / 74.12%);
+      padding: 0.5rem;
+      justify-content: space-evenly;
+    }
+  }
+}
