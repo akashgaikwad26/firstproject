@@ -1,0 +1,41 @@
+{
+  "name": "pravinyam-web-api",
+  "version": "1.0.0",
+  "description": "Initial Implementation for Pravinyam Midtier",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataScienceLabRepo/Pravinyam.git"
+  },
+  "keywords": [
+    "pravinyam"
+  ],
+  "author": "Dinesh Apte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DataScienceLabRepo/Pravinyam/issues"
+  },
+  "homepage": "https://github.com/DataScienceLabRepo/Pravinyam#readme",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.121.0",
+    "body-parser": "^1.19.0",
+    "chai": "^4.3.6",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "json-2-csv": "^3.10.3",
+    "mocha": "^10.0.0",
+    "nodemailer": "^6.8.0",
+    "nodemailer-express-handlebars": "^5.0.0",
+    "pg": "^8.6.0",
+    "utf8-to-ansi": "^1.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

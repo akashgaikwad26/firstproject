@@ -1,0 +1,7 @@
+userid,password,role,user_group
+testid1@gmail.com,intern1@123,student,DSL
+testid2@gmail.com,intern2@123,student,christ college
+testid1@gmail.com,test@123,admin,DSL
+testrole@gmail.com,testrole@123,role1,christ college
+testusergroup@gmail.com,testusergroup@123,corporate admin,testgroup
+,,,

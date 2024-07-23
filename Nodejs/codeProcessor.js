@@ -1,0 +1,2 @@
+const code = "#include <stdio.h>\r\n\r\nint main() {\r\n  \r\n    // Create integer variables num1 and num2. Assign values to num1 and num2.\r\n    int num1 = 2, num2 = 3;\r\n    \r\n    // Create a variable output\r\n    int output;\r\n\r\n    output = num1 * num2;\r\n    \r\n   printf(\"Output = %d\", output);\r\n\r\n   return 0;\r\n   \r\n}\r\n";
+console.log(code.replace(/\r\n/g, ''));

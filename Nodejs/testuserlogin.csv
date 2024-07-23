@@ -1,0 +1,7 @@
+username,password,operation
+intern1@gmail.com,intern1@123,login
+intern1@gmail.com,intern1@123,logout
+intern2@gmail.com,intern2@123,login
+intern2@gmail.com,intern2@123,logout
+admin@gmail.com,admin@123,login
+admin@gmail.com,admin@123,logout
